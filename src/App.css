@@ -1,0 +1,41 @@
+.app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  margin: 50px auto;
+  border: 3px solid darkgreen;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: orange;
+}
+
+.changeButton {
+  background-color: darkgreen;
+  color: white;
+  padding: 5px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.allInputs {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.input {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+}
