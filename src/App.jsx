@@ -1,24 +1,44 @@
-import Form from './Form';
-import { useState } from 'react';
-import "./App.css"
+import Form from "./components/finalForm/index.jsx";
+import DataForm from "./components/DataForm/index.jsx";
+import { useState } from "react";
 
 function App() {
-  const [formData, setFormData] = useState({
-    name: "",
-    surname: "",
-    info: "",
-    age: "",
-    gender: ""
-  });
+  const [nameInput, setNameInput] = useState("");
+  const [surnameInput, setSurnameInput] = useState("");
+  const [infoInput, setInfoInput] = useState("");
+  const [ageInput, setAgeInput] = useState("");
+  
+  
+  function takeInputNameData(e) {
+    setNameInput(e.target.value);
+  }
 
-  const handleChange = () => {
-    setFormData({ name: "Shahmar", surname: "Kazimov", info: "Developer", age: "30", gender: "Man" });
+  function takeSurnameData(e) {
+    setSurnameInput(e.target.value);
+  }
+
+  function takeInfoData(e) {
+    setInfoInput(e.target.value);
+  }
+
+  function takeAgeData(e) {
+    setAgeInput(e.target.value);
   }
 
   return (
-    <div className="app">
-      <Form formData={formData} />
-      <button className='changeButton' onClick={handleChange}>Change</button>
+    <div>
+      <DataForm
+        takeInputNameData={takeInputNameData}
+        takeSurnameData={takeSurnameData}
+        takeInfoData={takeInfoData}
+        takeAgeData={takeAgeData}
+      />
+      <Form
+        firstnameInput={nameInput}
+        surnameInput={surnameInput}
+        infoInput={infoInput}
+        ageInput={ageInput}
+      />
     </div>
   );
 }
